@@ -1,24 +1,25 @@
 # ibadanLife
 
-Browser life simulation for **Ibadan and all of Oyo State** — inspired by Lagos Life, expanded with freelance, hubs, faith, news, auth, homes, transport and street scenes.
+Browser life simulation for **Ibadan and all of Oyo State**.
+
+## Live
+
+- **App:** https://ibadan-life.netlify.app
+- **GitHub:** https://github.com/camzoidltd/ibadanlife
+- **Supabase:** project `vyhslxuecuaqkmfsawos` (gigs, news, hubs, auth, profiles)
 
 ## Features
 
-- Full Oyo map (Ibadan, Oyo, Ogbomoso, Oke-Ogun, Ibarapa) with real neighbourhoods
-- Needs system, jobs with workplace pay, building & businesses
-- **Freelancer corner**, hubs (founders, gamers…), After Dark 18+, faith paths, news feed
-- **Supabase**: shared gigs/news/hubs + Auth (sign up / sign in / profiles)
-- **Homes** with weekly rent & move-in costs
-- **Transport**: trek, okada, keke, danfo, cab, car
-- Street scene + drive mode on Live / Drive tabs
+- Illustrated interactive map (drag, zoom, roads, airport)
+- Close street-level view (walk, swipe, interact with buildings)
+- Homes, transport, jobs, freelance, hubs, faith, news
+- Supabase Auth + shared multiplayer data
 
 ## Stack
 
-- Vite + React 19 + TypeScript
-- Supabase (Postgres, Auth, REST)
-- Netlify static hosting
+Vite + React 19 + TypeScript + Supabase + Netlify
 
-## Setup
+## Local
 
 ```bash
 cp .env.example .env
@@ -27,14 +28,11 @@ npm install
 npm run dev
 ```
 
-## Deploy (Netlify)
+## Deploy
 
-- Build: `npm run build`
-- Publish directory: `dist`
-- Env: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
+```bash
+npm run build
+# Netlify: publish dist, env VITE_SUPABASE_*
+```
 
-## Supabase
-
-Run SQL in `supabase/schema.sql` and `supabase/schema_v2.sql` (profiles) if tables are missing.
-
-Project ref: `vyhslxuecuaqkmfsawos`
+Env vars on Netlify must include `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
